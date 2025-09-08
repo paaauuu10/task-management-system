@@ -13,12 +13,30 @@ docker-compose up
 
 ## Project Structure
 
-task-management-system/
-├── docker-compose.yml      
-├── .env.sample             
-├── README.md             
-└── django_backend/        
-    ├── Dockerfile          
-    ├── requirements.txt    
-    └── scripts/
-        └── entrypoint.sh   
+task-management-system
+├── README.md
+├── django_backend
+│   ├── Dockerfile
+│   ├── config
+│   │   ├── __init__.py
+│   │   ├── __pycache__
+│   │   │   ├── __init__.cpython-311.pyc
+│   │   │   ├── settings.cpython-311.pyc
+│   │   │   ├── urls.cpython-311.pyc
+│   │   │   └── wsgi.cpython-311.pyc
+│   │   ├── asgi.py
+│   │   ├── settings.py
+│   │   ├── urls.py
+│   │   └── wsgi.py
+│   ├── manage.py
+│   ├── requirements.txt
+│   └── scripts
+│       └── entrypoint.sh
+├── docker-compose.yml
+└── docs
+    └── DECISIONS.md
+
+Accessing Services
+Django: http://localhost:8000
+PostgreSQL: accessible inside Docker network on container db, port 5432
+Redis: accessible inside Docker network on container redis, port 6379
