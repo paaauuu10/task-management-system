@@ -1,2 +1,6 @@
 .env
 .DStore
+*.pyc
+__pycache__/
+django_backend/*.sqlite3
+django_backend/media/
