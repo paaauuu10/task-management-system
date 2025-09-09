@@ -1,0 +1,8 @@
+{% extends "users/base.html" %}
+
+{% block title %}Success{% endblock %}
+
+{% block content %}
+<p style="color: green;">{{ message }}</p>
+<a href="{% url 'login' %}">Back to Login</a>
+{% endblock %}

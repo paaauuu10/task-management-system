@@ -14,11 +14,22 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+"""URL configuration for config project."""
+
 from django.contrib import admin
 from django.urls import path, include
+from django.shortcuts import redirect
 
 urlpatterns = [
+    # Admin panel
     path('admin/', admin.site.urls),
+
+    # User management API
     path("api/users/", include("users.urls")),
+
+    # Authentication API (register, login, logout, refresh)
     path("api/auth/", include("users.auth_urls")),
+
+    # Frontend root redirect to login page
+    path("", lambda request: redirect("login"), name="home"),
 ]
