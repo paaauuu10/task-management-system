@@ -26,7 +26,7 @@ A modern task management system built with Django, PostgreSQL, and Redis, all or
 
 ```bash
 # Clone the repository
-git clone https://github.com/username/task-management-system.git
+git clone https://github.com/paaauuu10/task-management-system.git
 cd task-management-system
 
 # Set up environment variables
